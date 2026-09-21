@@ -7,142 +7,168 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@400;500&family=Special+Elite&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body class="page-archive">
-  <a class="skip" href="#main">Skip to subject model</a>
+  <a class="skip" href="#main">Skip to archive</a>
 
-  <header class="top">
-    <p>Android Archive System · Human Patterns Lab · <strong>FILE 011</strong></p>
-    <p>Subject incomplete · London 1968</p>
+  <header class="mast">
+    <p><strong>Android Archive System</strong> Human Patterns Lab</p>
+    <nav aria-label="Case stages">
+      <ol class="storyline">
+        <li><a href="index.html" aria-current="step">01 Build her</a></li>
+        <li class="is-ahead"><a href="reconstruction.html">02 Think about her</a></li>
+        <li class="is-ahead"><a href="no-original.html">03 Break her apart</a></li>
+      </ol>
+    </nav>
+    <p class="mast-file">File 011<br>London, 1968</p>
   </header>
 
-  <nav class="storyline" aria-label="Case stages">
-    <ol>
-      <li><a href="index.html" aria-current="step">01 Archive · Build her</a></li>
-      <li class="is-ahead"><a href="reconstruction.html">02 Reconstruction · Think about her</a></li>
-      <li class="is-ahead"><a href="no-original.html">03 No original · Break her apart</a></li>
-    </ol>
-  </nav>
+  <main id="main" class="board">
+    <aside class="machine" data-machine>
+      <figure>
+        <img src="images/unit/aru-07-profile.jpg" alt="Graphite profile of reconstruction unit ARU-07, mechanical interior exposed, analog print.">
+      </figure>
+      <p class="machine-id">ARU-07<span>Archive reconstruction unit</span></p>
+      <p class="machine-fn">Observe · Analyze · Compare · Revise · Construct</p>
+      <section class="cog" aria-live="polite">
+        <p class="cog-head"><span>Machine analysis</span><span data-status>Status: observing</span></p>
+        <p class="cog-log" data-cog>Waiting for a record.
+I do not begin with a person.</p>
+      </section>
+      <p class="cog-note">A face is a beginning. It is not yet a person.</p>
+      <p class="cog-quote" data-voice>I do not see a human. I see patterns.</p>
+    </aside>
 
-  <main id="main" class="wrap">
-    <article class="build">
-      <header class="build-lead">
-        <p>Observe → form a person. Do not begin with a finished subject.</p>
-        <p><strong>A person is being built from other people’s records.</strong></p>
+    <section class="stage">
+      <header class="stage-head">
+        <h1>Archive fragments</h1>
+        <p class="hint">Select a record to begin analysis.</p>
       </header>
-
-      <div class="frag-col frag-col--left">
+      <div class="frags">
         <button class="frag" type="button" data-id="portrait">
-          <span class="tag">VISUAL</span>
           <img src="images/archive/evelyn-portrait.jpg" alt="Black-and-white portrait of a young woman in a dark turtleneck, 1960s.">
-          <span class="cap">Portrait</span>
+          <span class="meta">Print · c. 1968</span>
+          <span class="cap">01. Portrait</span>
         </button>
         <button class="frag" type="button" data-id="contact">
-          <span class="tag">VISUAL</span>
           <img src="images/archive/contact-sheet.jpg" alt="Photographic contact sheet of small film frames.">
-          <span class="cap">Contact sheet</span>
+          <span class="meta">Film sheet · six states</span>
+          <span class="cap">02. Contact sheet</span>
         </button>
         <button class="frag" type="button" data-id="diary">
-          <span class="tag">SELF</span>
           <img src="images/archive/diary-page.jpg" alt="Handwritten diary page in ink on aged paper.">
-          <span class="cap">Diary</span>
+          <span class="meta">Notebook · first person</span>
+          <span class="cap">03. Diary</span>
         </button>
-      </div>
-
-      <section class="model" data-model data-clarity="0" aria-labelledby="model-title">
-        <p class="model-kicker" id="model-title">Evelyn / Identity model</p>
-        <p class="model-pct" data-pct>12%</p>
-        <p class="model-status" data-status>Incomplete · Unknown subject</p>
-        <figure class="model-face">
-          <img class="face-full" src="images/archive/evelyn-portrait.jpg" alt="Incomplete portrait of the missing woman, still blurred.">
-          <img class="face-eye" src="images/archive/evelyn-eye-r.jpg" alt="Cropped right eye from the same portrait.">
-        </figure>
-        <ul class="model-facts" data-facts>
-          <li>No verified name</li>
-          <li>No verified occupation</li>
-          <li>Source: fragments only</li>
-        </ul>
-        <p class="model-layers" data-layers>Layers: —</p>
-        <p class="model-voice" data-voice>I begin with fragments, not a person.</p>
-      </section>
-
-      <div class="frag-col frag-col--right">
         <button class="frag" type="button" data-id="flyer">
-          <span class="tag">WITNESS</span>
           <img src="images/archive/event-flyer.jpg" alt="Worn 1960s event flyer for an underground performance.">
-          <span class="cap">Event flyer</span>
+          <span class="meta">London · underground</span>
+          <span class="cap">04. Event flyer</span>
         </button>
         <button class="frag" type="button" data-id="medical">
-          <span class="tag">INSTITUTION</span>
           <img src="images/archive/medical-form.jpg" alt="Medical form with typed fields and redacted lines.">
-          <span class="cap">Medical form</span>
+          <span class="meta">Hospital copy</span>
+          <span class="cap">05. Medical record</span>
         </button>
         <button class="frag" type="button" data-id="police">
-          <span class="tag">INSTITUTION</span>
           <img src="images/archive/police-report.jpg" alt="Police report typed on official paper.">
-          <span class="cap">Police note</span>
-        </button>
-      </div>
-
-      <div class="frag-row">
-        <button class="frag" type="button" data-id="ticket">
-          <span class="tag">VISUAL</span>
-          <img src="images/archive/tube-ticket.jpg" alt="London Underground ticket stub.">
-          <span class="cap">Tube ticket</span>
-        </button>
-        <button class="frag" type="button" data-id="room">
-          <span class="tag">VISUAL</span>
-          <img src="images/archive/empty-studio.jpg" alt="Empty room with a chair and daylight, no occupant.">
-          <span class="cap">Room photograph</span>
-        </button>
-        <button class="frag" type="button" data-id="hand">
-          <span class="tag">VISUAL</span>
-          <img src="images/evidence/hand-injury.jpg" alt="Photograph of a hand with a small injury.">
-          <span class="cap">Hand photograph</span>
+          <span class="meta">Missing-person note</span>
+          <span class="cap">06. Police note</span>
         </button>
         <button class="frag" type="button" data-id="letter">
-          <span class="tag">SELF</span>
           <img src="images/evidence/letter-sister.jpg" alt="Typewritten letter on thin paper.">
-          <span class="cap">Letter</span>
+          <span class="meta">Family correspondence</span>
+          <span class="cap">07. Letter</span>
+        </button>
+        <button class="frag" type="button" data-id="ticket">
+          <img src="images/archive/tube-ticket.jpg" alt="London Underground ticket stub.">
+          <span class="meta">Northern line stub</span>
+          <span class="cap">08. Tube ticket</span>
+        </button>
+        <button class="frag" type="button" data-id="room">
+          <img src="images/archive/empty-studio.jpg" alt="Empty room with a chair and daylight, no occupant.">
+          <span class="meta">Scene after absence</span>
+          <span class="cap">09. Room photograph</span>
+        </button>
+        <button class="frag" type="button" data-id="hand">
+          <img src="images/evidence/hand-injury.jpg" alt="Photograph of a hand with a small injury.">
+          <span class="meta">Body fragment</span>
+          <span class="cap">10. Hand photograph</span>
         </button>
         <button class="frag" type="button" data-id="witness">
-          <span class="tag">WITNESS</span>
           <img src="images/evidence/witness-a.jpg" alt="Typewritten witness statement.">
-          <span class="cap">Witness statement</span>
+          <span class="meta">Interview copy</span>
+          <span class="cap">11. Witness statement</span>
         </button>
-        <button class="frag" type="button" data-id="street">
-          <span class="tag">VISUAL</span>
-          <img src="images/archive/london-street.jpg" alt="1960s London street in black and white.">
-          <span class="cap">London street</span>
+        <button class="frag" type="button" data-id="object">
+          <img src="images/archive/matchbook.jpg" alt="Worn matchbook, a small personal object.">
+          <span class="meta">Personal effect</span>
+          <span class="cap">12. Personal object</span>
         </button>
       </div>
-    </article>
+      <blockquote class="stage-quote">
+        <p>A person is not found in a single record. She emerges from contradictions.</p>
+      </blockquote>
 
-    <p class="continue"><a href="reconstruction.html">When the model is no longer empty → think about her</a></p>
+      <aside class="inspect" data-inspect hidden>
+        <div class="inspect-img"><img alt=""></div>
+        <div class="inspect-panel">
+          <p class="inspect-status" data-istatus></p>
+          <div data-body></div>
+          <button class="inspect-close" type="button" data-close>Close record</button>
+        </div>
+      </aside>
+    </section>
+
+    <aside class="subject" data-model data-clarity="0">
+      <h2>Subject model</h2>
+      <p class="subject-pct">Identity model <strong data-pct>08%</strong></p>
+      <p class="bar" aria-hidden="true"><span data-bar></span></p>
+      <figure class="subject-face">
+        <img class="base" src="images/archive/evelyn-portrait.jpg" alt="Incomplete reconstruction of Evelyn’s face.">
+        <img class="base-b" src="images/archive/evelyn-portrait.jpg" alt="">
+        <img class="eye" src="images/archive/evelyn-eye-r.jpg" alt="A single cropped eye from the portrait.">
+        <img class="scrap scrap-a" src="images/archive/contact-sheet.jpg" alt="">
+        <img class="scrap scrap-b" src="images/archive/medical-form.jpg" alt="">
+        <img class="scrap scrap-c" src="images/archive/diary-page.jpg" alt="">
+      </figure>
+      <form class="layers" data-layer-form>
+        <p>Layers</p>
+        <label><input type="checkbox" value="VISUAL" disabled> <span>Visual</span></label>
+        <label><input type="checkbox" value="SELF" disabled> <span>Self</span></label>
+        <label><input type="checkbox" value="INSTITUTION" disabled> <span>Institution</span></label>
+        <label><input type="checkbox" value="WITNESS" disabled> <span>Witness</span></label>
+      </form>
+      <dl class="sheet">
+        <div><dt>Name</dt><dd data-f="name">Unknown</dd></div>
+        <div><dt>Age</dt><dd data-f="age">Unknown</dd></div>
+        <div><dt>Occupation</dt><dd data-f="occupation">Unknown</dd></div>
+        <div><dt>Location</dt><dd data-f="location">Unknown</dd></div>
+        <div><dt>Status</dt><dd data-f="status">Unknown</dd></div>
+      </dl>
+      <p class="subject-hand">Fragments align. A person begins to appear. But what is still missing?</p>
+    </aside>
+
+    <figure class="city">
+      <img src="images/archive/london-thames-night.jpg" alt="Night photograph of the Thames and St Paul’s, late 1960s, analog print.">
+    </figure>
   </main>
 
-  <aside class="inspect" data-inspect hidden>
-    <div class="inspect-img"><img alt=""></div>
-    <div class="inspect-panel">
-      <p class="inspect-status" data-status aria-live="polite"></p>
-      <div data-body></div>
-      <button class="inspect-close" type="button" data-close>Close record</button>
-    </div>
-  </aside>
+  <p class="continue"><a href="reconstruction.html">When the model is no longer empty → think about her</a></p>
 
   <footer class="site-footer">
-    <p>CASE 11 is a studio reconstruction. Evelyn Vale is fictional. Photographs and documents are archival or generated source material.</p>
+    <p>CASE 11 is a studio reconstruction. Evelyn Vale is fictional.</p>
     <details>
       <summary>Media credits</summary>
       <ul class="credits-list">
-        <li>Portrait, contact sheet, diary, medical form, police note, flyer, ticket, studio, Super 8, later sighting — project archive stills.</li>
-        <li>London street — Fortepan / Wikimedia Commons, CC BY-SA 3.0.</li>
-        <li>Tape recorder — Wikimedia Commons, public domain / CC0.</li>
-        <li>Letter, wet coat, hand, map, witness pages — project evidence stills.</li>
+        <li>ARU-07 profile — generated analog still for this project.</li>
+        <li>Portrait, contact sheet, diary, medical form, police note, flyer, ticket, room, matchbook — project archive stills.</li>
+        <li>London night river — generated analog still after 1960s Thames / St Paul’s photographs. Street still (Fortepan / Wikimedia Commons, CC BY-SA 3.0) remains in the archive.</li>
+        <li>Letter, hand, witness pages — project evidence stills.</li>
       </ul>
     </details>
   </footer>
-  <script src="js/script.js?v=11"></script>
+  <script src="js/script.js?v=13"></script>
 </body>
 </html>

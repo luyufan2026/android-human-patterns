@@ -7,197 +7,144 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@400;500&family=Special+Elite&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body class="page-none">
   <a class="skip" href="#main">Skip to reconstructions</a>
 
-  <header class="top">
-    <p>Android Archive System · Human Patterns Lab · <strong>FILE 011</strong></p>
-    <p>Same archive. Three Evelyns.</p>
+  <header class="mast">
+    <p><strong>Android Archive System</strong> Human Patterns Lab</p>
+    <nav aria-label="Case stages">
+      <ol class="storyline">
+        <li class="is-past"><a href="index.html">01 Build her</a></li>
+        <li class="is-past"><a href="reconstruction.html">02 Think about her</a></li>
+        <li><a href="no-original.html" aria-current="step">03 Break her apart</a></li>
+      </ol>
+    </nav>
+    <p class="mast-file">File 011<br>No original</p>
   </header>
 
-  <nav class="storyline" aria-label="Case stages">
-    <ol>
-      <li class="is-past"><a href="index.html">01 Archive · Build her</a></li>
-      <li class="is-past"><a href="reconstruction.html">02 Reconstruction · Think about her</a></li>
-      <li><a href="no-original.html" aria-current="step">03 No original · Break her apart</a></li>
-    </ol>
-  </nav>
+  <main id="main" class="board-break" data-branch>
+    <aside class="machine" data-machine>
+      <figure>
+        <img src="images/unit/aru-07-profile.jpg" alt="ARU-07 in profile, unable to hold a single original.">
+      </figure>
+      <p class="machine-id">ARU-07<span>Multiple subject states</span></p>
+      <p class="machine-fn">Conflict · Reconstruct · Refuse a single original</p>
+      <section class="cog" aria-live="polite">
+        <p class="cog-head"><span>Machine analysis</span><span data-status>Status: split</span></p>
+        <p class="cog-log" data-cog>Same archive.
+Three coherent Evelyns.
+No single model explains all records.</p>
+      </section>
+      <p class="cog-quote" data-voice>Which one did I find? Which one did I create?</p>
+    </aside>
 
-  <main id="main" class="wrap">
-    <article class="branch" data-branch>
-      <header class="branch-lead">
-        <p>No single model explains all records. The same evidence can construct three coherent people.</p>
-        <p class="hand">Which one did the machine find? Which one did it create?</p>
-      </header>
+    <header class="break-lead">
+      <p>The same evidence supports different people. Open a record in any path to hear the machine read it twice.</p>
+      <p class="hand">Same archive. Different Evelyns.</p>
+    </header>
+    <p class="fork">Evelyn · path A / path B / path C</p>
 
-      <div class="branch-fork" aria-hidden="true">
-        <p class="hub">Evelyn</p>
-        <span>Path A</span>
-        <span>/</span>
-        <span>Path B</span>
-        <span>/</span>
-        <span>Path C</span>
+    <section class="path path-a" aria-labelledby="path-a">
+      <h2 id="path-a">Path A</h2>
+      <p class="who">Unstable patient</p>
+      <figure class="face">
+        <img src="images/archive/evelyn-portrait.jpg" alt="Evelyn as read by the hospital.">
+        <figcaption>Institutional overlay</figcaption>
+      </figure>
+      <p>Built from the medical record, the injured hand, Witness B, psychiatric language.</p>
+      <div class="same-ev">
+        <button type="button" data-id="coat" data-read="a"><img src="images/evidence/wet-coat.jpg" alt="Wet coat as confusion."><p><strong>Wet coat.</strong> Confusion. She did not know where she was going.</p></button>
+        <button type="button" data-id="medical" data-read="a"><img src="images/archive/medical-form.jpg" alt="Medical form as diagnosis."><p><strong>Medical.</strong> Possible instability written as fact.</p></button>
+        <button type="button" data-id="hand" data-read="a"><img src="images/evidence/hand-injury.jpg" alt="Hand as self-harm reading."><p><strong>Hand.</strong> Injury read as self-inflicted.</p></button>
+        <button type="button" data-id="witness-b" data-read="a"><img src="images/evidence/witness-b.jpg" alt="Witness B."><p><strong>Witness B.</strong> She seemed unwell.</p></button>
       </div>
+    </section>
 
-      <section class="path path-a" aria-labelledby="path-a">
-        <h2 id="path-a">Path A</h2>
-        <p class="who">Evelyn as unstable patient</p>
-        <figure class="face">
-          <img src="images/archive/evelyn-portrait.jpg" alt="Portrait of Evelyn overlaid by medical reading — Path A.">
-          <figcaption>Institutional overlay</figcaption>
-        </figure>
-        <p>Built mainly from the medical record, the injured hand, Witness B, and psychiatric language. The institution speaks louder than she does.</p>
-        <div class="same-ev">
-          <button type="button" data-id="coat" data-read="a">
-            <img src="images/evidence/wet-coat.jpg" alt="Wet coat, interpreted as confusion.">
-            <p><strong>Wet coat.</strong> Evidence of confusion. She did not know where she was going.</p>
-          </button>
-          <button type="button" data-id="medical" data-read="a">
-            <img src="images/archive/medical-form.jpg" alt="Medical form as diagnosis.">
-            <p><strong>Medical record.</strong> Diagnostic language: possible instability.</p>
-          </button>
-          <button type="button" data-id="hand" data-read="a">
-            <img src="images/evidence/hand-injury.jpg" alt="Hand injury as self-harm reading.">
-            <p><strong>Hand.</strong> Injury read as self-inflicted.</p>
-          </button>
-          <button type="button" data-id="witness-b" data-read="a">
-            <img src="images/evidence/witness-b.jpg" alt="Witness B supporting a medical narrative.">
-            <p><strong>Witness B.</strong> She seemed unwell. She talked to herself.</p>
-          </button>
-        </div>
-      </section>
-
-      <section class="path path-b" aria-labelledby="path-b">
-        <h2 id="path-b">Path B</h2>
-        <p class="who">Evelyn as missing victim</p>
-        <figure class="face">
-          <img src="images/archive/evelyn-portrait.jpg" alt="Portrait of Evelyn overlaid by police reading — Path B.">
-          <figcaption>Missing-person overlay</figcaption>
-        </figure>
-        <p>Built mainly from the wet coat, the tube ticket, the police record, and possible accident evidence. The city becomes a crime scene.</p>
-        <div class="same-ev">
-          <button type="button" data-id="coat" data-read="b">
-            <img src="images/evidence/wet-coat.jpg" alt="Wet coat, interpreted as accident.">
-            <p><strong>Wet coat.</strong> Evidence of accident. Water, night, the river edge.</p>
-          </button>
-          <button type="button" data-id="ticket" data-read="b">
-            <img src="images/archive/tube-ticket.jpg" alt="Ticket as last movement.">
-            <p><strong>Tube ticket.</strong> Last known movement. Not a plan — a path.</p>
-          </button>
-          <button type="button" data-id="police" data-read="b">
-            <img src="images/archive/police-report.jpg" alt="Police report as missing-person file.">
-            <p><strong>Police record.</strong> Missing person. Foul play not excluded.</p>
-          </button>
-          <button type="button" data-id="map" data-read="b">
-            <img src="images/evidence/map-fragment.jpg" alt="Map fragment as route of disappearance.">
-            <p><strong>Map fragment.</strong> A route that ends.</p>
-          </button>
-        </div>
-      </section>
-
-      <section class="path path-c" aria-labelledby="path-c">
-        <h2 id="path-c">Path C</h2>
-        <p class="who">Evelyn as artist who erased herself</p>
-        <figure class="face">
-          <img src="images/archive/evelyn-portrait.jpg" alt="Portrait of Evelyn fading — Path C, self-erasure.">
-          <figcaption>Absence overlay</figcaption>
-        </figure>
-        <p>Built mainly from the diary, the letter, missing documents, the performance context, and contradictory statements. Absence is the work.</p>
-        <div class="same-ev">
-          <button type="button" data-id="coat" data-read="c">
-            <img src="images/evidence/wet-coat.jpg" alt="Wet coat, interpreted as planted evidence.">
-            <p><strong>Wet coat.</strong> Deliberately planted. A prop left for the archive.</p>
-          </button>
-          <button type="button" data-id="diary" data-read="c">
-            <img src="images/archive/diary-page.jpg" alt="Diary as instruction for disappearance.">
-            <p><strong>Diary.</strong> She writes about becoming unrecoverable.</p>
-          </button>
-          <button type="button" data-id="letter" data-read="c">
-            <img src="images/evidence/letter-sister.jpg" alt="Letter as planned leaving.">
-            <p><strong>Letter.</strong> Intention, not accident. A last correspondence.</p>
-          </button>
-          <button type="button" data-id="flyer" data-read="c">
-            <img src="images/archive/event-flyer.jpg" alt="Flyer as performance context.">
-            <p><strong>Event flyer.</strong> Disappearance staged inside an art circle.</p>
-          </button>
-        </div>
-      </section>
-
-      <section class="branch-share">
-        <h2 class="visually-hidden">Shared archive</h2>
-        <p>The same six records sit under all three paths. Meaning is not in the object. Meaning is in the model that claims it.</p>
-        <div class="share-strip">
-          <figure>
-            <img src="images/evidence/wet-coat.jpg" alt="Shared evidence: wet coat.">
-            <figcaption>Wet coat</figcaption>
-          </figure>
-          <figure>
-            <img src="images/archive/tube-ticket.jpg" alt="Shared evidence: tube ticket.">
-            <figcaption>Ticket</figcaption>
-          </figure>
-          <figure>
-            <img src="images/archive/medical-form.jpg" alt="Shared evidence: medical form.">
-            <figcaption>Medical</figcaption>
-          </figure>
-          <figure>
-            <img src="images/archive/diary-page.jpg" alt="Shared evidence: diary.">
-            <figcaption>Diary</figcaption>
-          </figure>
-          <figure>
-            <img src="images/archive/police-report.jpg" alt="Shared evidence: police report.">
-            <figcaption>Police</figcaption>
-          </figure>
-          <figure>
-            <img src="images/evidence/letter-sister.jpg" alt="Shared evidence: letter.">
-            <figcaption>Letter</figcaption>
-          </figure>
-        </div>
-        <p>
-          <button class="compare" type="button" data-compare>Compare all</button>
-        </p>
-      </section>
-
-      <div class="overlap" data-overlap hidden>
-        <img src="images/archive/evelyn-portrait.jpg" alt="Path A overlay of Evelyn.">
-        <img src="images/archive/evelyn-eye-l.jpg" alt="Path B overlay, cropped eye.">
-        <img src="images/archive/evelyn-eye-r.jpg" alt="Path C overlay, other eye.">
-        <p class="lab"><span>Patient</span><span>Victim</span><span>Artist</span></p>
+    <section class="path path-b" aria-labelledby="path-b">
+      <h2 id="path-b">Path B</h2>
+      <p class="who">Missing victim</p>
+      <figure class="face">
+        <img src="images/archive/evelyn-portrait.jpg" alt="Evelyn as circulated by police.">
+        <figcaption>Missing-person overlay</figcaption>
+      </figure>
+      <p>Built from the wet coat, the ticket, the police record, possible accident evidence.</p>
+      <div class="same-ev">
+        <button type="button" data-id="coat" data-read="b"><img src="images/evidence/wet-coat.jpg" alt="Wet coat as accident."><p><strong>Wet coat.</strong> Accident. Water, night, the river edge.</p></button>
+        <button type="button" data-id="ticket" data-read="b"><img src="images/archive/tube-ticket.jpg" alt="Ticket as last movement."><p><strong>Ticket.</strong> Last known route. Not a plan.</p></button>
+        <button type="button" data-id="police" data-read="b"><img src="images/archive/police-report.jpg" alt="Police as missing file."><p><strong>Police.</strong> Missing person. Foul play not excluded.</p></button>
+        <button type="button" data-id="map" data-read="b"><img src="images/evidence/map-fragment.jpg" alt="Map as path that ends."><p><strong>Map.</strong> A route that ends.</p></button>
       </div>
+    </section>
 
-      <section class="branch-final">
-        <p>Which one did the machine find?</p>
-        <p>Which one did it create?</p>
-        <p><strong>Reconstruction complete.</strong></p>
-        <p>Truth confidence: unknown</p>
-        <p>Original: unresolved</p>
-        <p class="model-voice">No single model explains all records.</p>
-      </section>
-    </article>
+    <section class="path path-c" aria-labelledby="path-c">
+      <h2 id="path-c">Path C</h2>
+      <p class="who">Artist who erased herself</p>
+      <figure class="face">
+        <img src="images/archive/evelyn-portrait.jpg" alt="Evelyn fading as artwork.">
+        <figcaption>Absence overlay</figcaption>
+      </figure>
+      <p>Built from the diary, the letter, missing documents, the performance context.</p>
+      <div class="same-ev">
+        <button type="button" data-id="coat" data-read="c"><img src="images/evidence/wet-coat.jpg" alt="Wet coat as planted evidence."><p><strong>Wet coat.</strong> Deliberately planted. A prop for the archive.</p></button>
+        <button type="button" data-id="diary" data-read="c"><img src="images/archive/diary-page.jpg" alt="Diary as instruction."><p><strong>Diary.</strong> She writes about becoming unrecoverable.</p></button>
+        <button type="button" data-id="letter" data-read="c"><img src="images/evidence/letter-sister.jpg" alt="Letter as planned leaving."><p><strong>Letter.</strong> Intention, not accident.</p></button>
+        <button type="button" data-id="flyer" data-read="c"><img src="images/archive/event-flyer.jpg" alt="Flyer as performance."><p><strong>Flyer.</strong> Disappearance staged inside an art circle.</p></button>
+      </div>
+    </section>
+
+    <section class="break-share">
+      <p>Six records sit under all three paths. Meaning is not in the object.</p>
+      <div class="share-strip">
+        <figure><img src="images/evidence/wet-coat.jpg" alt="Shared wet coat."><figcaption>Wet coat</figcaption></figure>
+        <figure><img src="images/archive/tube-ticket.jpg" alt="Shared ticket."><figcaption>Ticket</figcaption></figure>
+        <figure><img src="images/archive/medical-form.jpg" alt="Shared medical form."><figcaption>Medical</figcaption></figure>
+        <figure><img src="images/archive/diary-page.jpg" alt="Shared diary."><figcaption>Diary</figcaption></figure>
+        <figure><img src="images/archive/police-report.jpg" alt="Shared police report."><figcaption>Police</figcaption></figure>
+        <figure><img src="images/evidence/letter-sister.jpg" alt="Shared letter."><figcaption>Letter</figcaption></figure>
+      </div>
+      <p><button class="compare" type="button" data-compare>Compare all</button></p>
+    </section>
+
+    <div class="overlap" data-overlap hidden>
+      <img src="images/archive/evelyn-portrait.jpg" alt="Path A overlay.">
+      <img src="images/archive/evelyn-eye-l.jpg" alt="Path B overlay.">
+      <img src="images/archive/evelyn-eye-r.jpg" alt="Path C overlay.">
+      <p class="lab"><span>Patient</span><span>Victim</span><span>Artist</span></p>
+    </div>
+
+    <section class="break-final">
+      <p>Same archive. Different Evelyns.</p>
+      <p>Which one did the machine find?</p>
+      <p>Which one did it create?</p>
+      <p><strong>Reconstruction complete · truth confidence unknown · original unresolved</strong></p>
+    </section>
+
+    <figure class="city">
+      <img src="images/archive/london-thames-night.jpg" alt="Night photograph of the Thames and St Paul’s, late 1960s.">
+    </figure>
   </main>
 
   <aside class="inspect" data-inspect hidden>
     <div class="inspect-img"><img alt=""></div>
     <div class="inspect-panel">
-      <p class="inspect-status" data-status aria-live="polite"></p>
+      <p class="inspect-status" data-istatus></p>
       <div data-body></div>
       <button class="inspect-close" type="button" data-close>Close record</button>
     </div>
   </aside>
 
   <footer class="site-footer">
-    <p>RECONSTRUCTION COMPLETE · TRUTH CONFIDENCE UNKNOWN · ORIGINAL UNRESOLVED</p>
+    <p>RECONSTRUCTION COMPLETE · ORIGINAL UNRESOLVED</p>
     <details>
       <summary>Media credits</summary>
       <ul class="credits-list">
-        <li>Portrait and eye crops — project archive stills from the same negative.</li>
-        <li>Medical form, police report, diary, flyer, ticket — project archive stills.</li>
-        <li>Wet coat, letter, hand injury, map, witness pages — project evidence stills.</li>
+        <li>ARU-07 profile — generated analog still for this project.</li>
         <li>Evelyn Vale and CASE 11 are fictional. Credits describe media files only.</li>
       </ul>
     </details>
   </footer>
-  <script src="js/script.js?v=11"></script>
+  <script src="js/script.js?v=13"></script>
 </body>
 </html>

@@ -2,6 +2,15 @@
   "note": "Evelyn Vale and Case 11 are fictional. Credits describe media files only.",
   "images": [
     {
+      "file": "images/unit/aru-07-profile.jpg",
+      "title": "ARU-07 reconstruction unit, analog profile with exposed mechanics",
+      "creator": "Generated with Cursor image tools",
+      "source": "AI-generated unit still for this project",
+      "url": "",
+      "license": "Project original",
+      "kind": "AI-GENERATED"
+    },
+    {
       "file": "images/unit/aru-07-observe-partial.jpg",
       "title": "ARU-07 observer, partial mechanical eye",
       "creator": "Generated with Cursor image tools",
@@ -209,7 +218,14 @@
       "kind": "AI-GENERATED"
     },
     {
-      "file": "images/archive/london-street.jpg",
+      "file": "images/archive/london-thames-night.jpg",
+      "title": "Thames at night with St Paul’s, analog reconstruction",
+      "creator": "Generated with Cursor image tools",
+      "source": "AI-generated archival city still for this project",
+      "url": "",
+      "license": "Project original",
+      "kind": "AI-GENERATED"
+    },
       "title": "Old Compton Street, Soho, 1960",
       "creator": "Métneki János dr. / Fortepan",
       "source": "Wikimedia Commons",
