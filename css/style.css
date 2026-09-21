@@ -245,7 +245,25 @@ button {
   line-height: 1.55;
   color: var(--machine-ink);
   min-height: 8em;
-  white-space: pre-wrap;
+  max-height: 240px;
+  overflow: auto;
+}
+
+.cog-log p {
+  margin: 0 0 0.3em;
+}
+
+.cog-log::after {
+  content: "█";
+  display: inline-block;
+  width: 0.65em;
+  animation: cog-blink 1s steps(1) infinite;
+}
+
+@keyframes cog-blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .cog-note {
@@ -1136,9 +1154,11 @@ button {
 
 @media (prefers-reduced-motion: reduce) {
   html,
-  .frag {
+  .frag,
+  .cog-log::after {
     scroll-behavior: auto;
     transition: none;
+    animation: none;
   }
 }
 

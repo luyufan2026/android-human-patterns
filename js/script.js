@@ -481,10 +481,50 @@
   var cog = document.querySelector("[data-cog]");
   var cogStatus = document.querySelector("[data-status]");
   var voiceEl = document.querySelector("[data-voice]");
+  var cogBusy = false;
+  var idleTimer = 0;
+  var idlePool = document.body.classList.contains("page-recon")
+    ? ["Waiting for combination", "A single record is not a cause", "Observing relations", "Do not conclude yet"]
+    : document.body.classList.contains("page-none")
+      ? ["Same archive. Three models held", "No single original", "Waiting for a path reading", "Truth confidence: unknown"]
+      : ["Observing archive field", "No record selected", "Identity model incomplete", "Waiting for visual input", "I do not begin with a person"];
+  var idleAt = 0;
 
   function setStatus(text) {
     if (cogStatus) cogStatus.textContent = text;
     if (machine) machine.classList.add("is-live");
+  }
+
+  function trimCog() {
+    if (!cog) return;
+    while (cog.children.length > 36) cog.removeChild(cog.firstChild);
+  }
+
+  function appendCog(text, typed, done) {
+    if (!cog) {
+      if (done) done();
+      return;
+    }
+    var line = document.createElement("p");
+    var full = "[" + stamp() + "] " + text;
+    cog.appendChild(line);
+    trimCog();
+    cog.scrollTop = cog.scrollHeight;
+    typeText(line, full, function () {
+      cog.scrollTop = cog.scrollHeight;
+      if (done) done();
+    });
+  }
+
+  function startIdle() {
+    if (!cog || reduce) return;
+    function tick() {
+      if (cogBusy) return;
+      appendCog(idlePool[idleAt % idlePool.length], true);
+      idleAt += 1;
+      idleTimer = setTimeout(tick, 2600 + Math.floor(Math.random() * 900));
+    }
+    idleTimer = setTimeout(tick, 400);
   }
 
   function writeCog(lines, done) {
@@ -492,24 +532,24 @@
       if (done) done();
       return;
     }
-    cog.textContent = "";
+    cogBusy = true;
+    clearTimeout(idleTimer);
     var i = 0;
     function next() {
       if (i >= lines.length) {
+        cogBusy = false;
+        startIdle();
         if (done) done();
         return;
       }
-      var line = "[" + stamp() + "] " + lines[i];
+      var text = lines[i];
       i += 1;
-      var p = document.createElement("span");
-      p.textContent = (cog.textContent ? "\n" : "") ;
-      cog.appendChild(document.createTextNode(i === 1 ? "" : "\n"));
-      var hold = document.createElement("span");
-      cog.appendChild(hold);
-      typeText(hold, line.replace(/^\n/, ""), function () { wait(220, next); });
+      appendCog(text, true, function () { wait(160, next); });
     }
     next();
   }
+
+  startIdle();
 
   var inspect = (function () {
     var root = document.querySelector("[data-inspect]");
