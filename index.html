@@ -3,221 +3,183 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>01 Emotion — Observation Protocol</title>
+    <title>FILE 011 — Evelyn Vale</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@400;500&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css?v=7" />
   </head>
-  <body class="page-emotion">
-    <a class="skip" href="#main">Skip to observation</a>
+  <body class="page-archive">
+    <a class="skip" href="#main">Skip to subject file</a>
 
-    <header class="protocol">
-      <p class="protocol-id">Unit 07 / observation</p>
-      <nav aria-label="Protocol pages">
-        <a href="index.html" aria-current="page">01 Emotion</a>
-        <a href="causality.html">02 Causality</a>
-        <a href="accident.html">03 Accident</a>
-      </nav>
-      <p class="protocol-live">
-        Human · <span data-confidence>78%</span>
-        <span class="dot" aria-hidden="true"></span>
-        <time data-clock>00:00:00</time>
-      </p>
-    </header>
-
-    <div class="page-kicker">
-      <h1>01 Emotion</h1>
-      <p class="file">Subject: human &nbsp; Conf <span data-confidence>78%</span></p>
+    <div class="access" data-access>
+      <p data-access-line>ACCESSING FILE...</p>
     </div>
 
-    <main id="main">
-      <section class="observe" aria-label="Emotion observation network">
-        <svg class="net" aria-hidden="true"></svg>
+    <main id="main" class="dossier">
+      <header class="file-brand">
+        <p>Android Archive System</p>
+        <p>Human Patterns Lab.</p>
+      </header>
 
-        <figure class="eye-core">
-          <img
-            src="images/observe-eye.jpg"
-            alt="Machine vision core: a close-up iris used as the observation system."
-          />
+      <header class="file-midhead">
+        <p><span class="file-no">File 011</span></p>
+        <p>Case status: Partial / Missing</p>
+      </header>
+
+      <header class="file-righthead">
+        <p>Subject <span class="redact" aria-hidden="true"></span></p>
+        <p>Evelyn Vale</p>
+        <p>1968 · London</p>
+      </header>
+
+      <nav class="file-nav" aria-label="Archive sections">
+        <h1 class="visually-hidden">Case 11, Evelyn Vale. Historical human subject, London 1968.</h1>
+        <ol>
+          <li>
+            <a href="index.html" aria-current="page">01_Identity</a>
+          </li>
+          <li>
+            <a href="reconstruction.html#visual">02_Visual Records</a>
+          </li>
+          <li>
+            <a href="reconstruction.html#writings">03_Personal Writings</a>
+          </li>
+          <li>
+            <a href="reconstruction.html#medical">04_Medical</a>
+          </li>
+          <li>
+            <a href="reconstruction.html#police">05_Police</a>
+          </li>
+          <li>
+            <a href="reconstruction.html#audio">06_Audio / Testimony</a>
+          </li>
+          <li>
+            <a href="reconstruction.html#objects">07_Objects</a>
+          </li>
+          <li>
+            <a href="no-original.html">08_Unverified</a>
+          </li>
+        </ol>
+
+        <div class="thumb-grid" aria-hidden="true">
+          <img src="images/archive/contact-sheet.jpg" alt="" />
+          <img src="images/archive/london-street.jpg" alt="" />
+          <img src="images/archive/diary-page.jpg" alt="" />
+          <img src="images/archive/police-report.jpg" alt="" />
+          <img src="images/archive/medical-form.jpg" alt="" />
+          <img src="images/archive/tube-ticket.jpg" alt="" />
+        </div>
+
+        <dl class="file-meta">
+          <div><dt>Total files</dt><dd>128</dd></div>
+          <div><dt>Accessed</dt><dd>17</dd></div>
+          <div><dt>Status</dt><dd>Partial</dd></div>
+          <div><dt>Login</dt><dd>Unit 07</dd></div>
+        </dl>
+      </nav>
+
+      <section class="file-subject" aria-label="Identity still">
+        <div class="portrait-wrap">
+          <figure class="portrait scan-shift">
+            <img
+              src="images/archive/evelyn-portrait.jpg"
+              alt="Black-and-white analog identification portrait of Evelyn Vale, a young woman in London, about 1968. Short dark hair, dark turtleneck, looking slightly away from the camera."
+            />
+            <span class="scan-box" aria-hidden="true">
+              Identity match
+              <small>62% · partial</small>
+              <small>Print date unverified</small>
+            </span>
+            <figcaption class="hand">print unverified</figcaption>
+          </figure>
+          <div class="eye-stack">
+            <figure>
+              <img src="images/archive/evelyn-eye-l.jpg" alt="Cropped left eye from the 1968 identity still." />
+            </figure>
+            <figure>
+              <img src="images/archive/evelyn-eye-r.jpg" alt="Cropped right eye from the 1968 identity still." />
+            </figure>
+          </div>
+        </div>
+
+        <dl class="subject-id">
+          <div><dt>Case</dt><dd>11</dd></div>
+          <div><dt>Subject</dt><dd>Evelyn Vale</dd></div>
+          <div><dt>Age</dt><dd>24</dd></div>
+          <div><dt>Year</dt><dd>1968</dd></div>
+          <div><dt>Location</dt><dd>London</dd></div>
+          <div><dt>Occupation</dt><dd>Performance artist / photographer</dd></div>
+          <div><dt>Status</dt><dd>Missing</dd></div>
+        </dl>
+        <p class="redact-row" aria-label="Redacted field"><span class="redact"></span></p>
+        <blockquote>
+          “They will keep the photographs and think they kept me.”
+        </blockquote>
+        <figure class="print-mark">
+          <img src="images/dossier/print.jpg" alt="Ink fingerprint stamped onto the archive sheet by the system." />
+          <figcaption>File 011 · scan</figcaption>
         </figure>
-
-        <figure class="subject-back">
-          <img
-            src="images/observe-subject.jpg"
-            alt="The subject seen from behind, standing in front of the observation system."
-          />
-          <figcaption>
-            <span>Subject</span>
-            <span>Under observation</span>
-          </figcaption>
-        </figure>
-
-        <button
-          type="button"
-          class="sample s-cam"
-          data-id="00"
-          data-class="SENSOR"
-          data-conf="99"
-          data-note="Wall-mounted capture node. Not an emotion. It watches the subject who is watching nothing."
-        >
-          <span class="tag">Node</span>
-          <img
-            src="images/observe-cam.jpg"
-            alt="Wall camera used by the observation system."
-          />
-          <span class="cap"><span>Cam 01</span><span>Record</span></span>
-        </button>
-
-        <button
-          type="button"
-          class="sample s-fear"
-          data-id="03"
-          data-class="FEAR"
-          data-conf="72"
-          data-note="Detected widened eyes, open mouth, heightened facial tension. Possible emotional state: fear or surprise."
-        >
-          <span class="tag">Sample</span>
-          <img
-            src="images/subject-fear.png"
-            alt="Same subject, eyes wide, recorded as possible fear or surprise."
-          />
-          <span class="cap"><span>03</span><span>Fear</span></span>
-        </button>
-
-        <button
-          type="button"
-          class="sample s-shock"
-          data-id="02"
-          data-class="SHOCK"
-          data-conf="68"
-          data-note="Mouth open. Breath held. Classification overlaps with fear. Cause: inconsistent."
-        >
-          <span class="tag">Sample</span>
-          <img
-            src="images/subject-shock.png"
-            alt="Same subject, mouth open, recorded as shock."
-          />
-          <span class="cap"><span>02</span><span>Shock</span></span>
-        </button>
-
-        <button
-          type="button"
-          class="sample s-anger"
-          data-id="06"
-          data-class="ANGER"
-          data-conf="61"
-          data-note="Jaw tight. Reduced softness around the mouth. Logged as anger or disgust. Signal is not exclusive."
-        >
-          <span class="tag">Sample</span>
-          <img
-            src="images/subject-anger.png"
-            alt="Same subject, face tightened, recorded as anger or disgust."
-          />
-          <span class="cap"><span>06</span><span>Anger</span></span>
-        </button>
-
-        <button
-          type="button"
-          class="sample s-joy"
-          data-id="04"
-          data-class="JOY"
-          data-conf="62"
-          data-note="Raised cheeks. Increased vocal energy. Often associated with reward. Subject may still report sadness."
-        >
-          <span class="tag">Sample</span>
-          <img
-            src="images/subject-joy.png"
-            alt="Same subject smiling, recorded as joy."
-          />
-          <span class="cap"><span>04</span><span>Joy</span></span>
-        </button>
-
-        <button
-          type="button"
-          class="sample s-reject"
-          data-id="05"
-          data-class="REJECTION"
-          data-conf="58"
-          data-note="Thumbs down. Reduced approval. Withdrawal possible. Label may be sadness, refusal, or performance."
-        >
-          <span class="tag">Sample</span>
-          <img
-            src="images/subject-reject.png"
-            alt="Same subject giving a thumbs down, recorded as rejection or sadness."
-          />
-          <span class="cap"><span>05</span><span>No</span></span>
-        </button>
-
-        <button
-          type="button"
-          class="sample s-null"
-          data-id="11"
-          data-class="UNCLASSIFIED"
-          data-conf="41"
-          data-note="Blank stare. No exclusive class. One expression may indicate multiple emotions."
-        >
-          <span class="tag">Sample</span>
-          <img
-            src="images/subject-blank.png"
-            alt="Same subject, blank stare, no clear emotion class."
-          />
-          <span class="cap"><span>11</span><span>Null</span></span>
-        </button>
-
-        <aside class="readout" data-readout hidden>
-          <button type="button" class="readout-close">Close</button>
-          <p class="readout-status" data-status></p>
-          <div class="readout-body" data-body></div>
-        </aside>
       </section>
 
-      <section class="notes">
-        <section class="panel">
-          <h2>Human emotion archive</h2>
-          <p class="meta-line">Subject: <span>Human</span></p>
-          <p class="meta-line">Status: <span>Under observation</span></p>
-          <p>Facial expressions are treated as measurable signals.</p>
-        </section>
-        <section class="panel">
-          <h2>System note</h2>
-          <p>One expression may indicate multiple emotions.</p>
-          <p>One emotion may produce multiple expressions.</p>
-        </section>
-        <section class="panel panel--alert">
-          <h2>Anomaly detected</h2>
-          <p>Subject is smiling.</p>
-          <p>Subject reports sadness.</p>
-          <p>Classification conflict.</p>
-        </section>
-        <section class="panel notes-end">
-          <h2>Classification incomplete.</h2>
-          <p class="continue">
-            <a href="causality.html">Next process → Causality</a>
-          </p>
-        </section>
-      </section>
+      <aside class="file-log" aria-label="System log">
+        <h2>System log</h2>
+        <ol>
+          <li><time>02:14:08</time> File opened</li>
+          <li><time>02:14:12</time> Visual record loaded</li>
+          <li><time>02:14:15</time> Identity match partial</li>
+          <li><time>02:14:21</time> Source conflict detected</li>
+        </ol>
+
+        <h2>Analysis result</h2>
+        <table>
+          <tbody>
+            <tr><th>Identity match</th><td>62%</td><td>partial</td></tr>
+            <tr><th>Source reliability</th><td>78%</td><td>mixed</td></tr>
+            <tr><th>Record consistency</th><td>41%</td><td>contradictory</td></tr>
+            <tr><th>Date confidence</th><td>69%</td><td>partial</td></tr>
+            <tr><th>Verification status</th><td>—</td><td>incomplete</td></tr>
+          </tbody>
+        </table>
+
+        <p class="note">
+          The subject can be indexed.
+          The subject cannot yet be verified.
+        </p>
+
+        <div class="place-row">
+          <figure>
+            <img src="images/archive/london-street.jpg" alt="Soho street in the early 1960s, filed as last known district." />
+            <figcaption class="hand">same street?</figcaption>
+          </figure>
+          <figure>
+            <img src="images/archive/empty-studio.jpg" alt="Empty room with scattered photographs. Occupancy unverified." />
+          </figure>
+        </div>
+
+        <p class="missing">
+          <span class="redact"></span>
+          <span class="redact short"></span>
+          Record incomplete.
+          <span class="hand quiet">more records do not produce one stable identity.</span>
+        </p>
+      </aside>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer dossier-foot">
       <details>
         <summary>Credits / media sources</summary>
+        <p>Homepage file presents a restricted identity sheet for a historical human subject. It does not contain the full case.</p>
         <ul class="credits-list">
-          <li>
-            Eye / camera / subject-from-behind: found cinematic observation
-            stills (baseline test texture).
-          </li>
-          <li>
-            Six flanking stills: found photographs of the same subject in
-            different expressions.
-          </li>
+          <li>Identity still and eye crops: generated analog portrait for fictional subject Evelyn Vale, 1968.</li>
+          <li>Street still: Old Compton Street, Soho, 1960 — Métneki János dr. / Fortepan, Wikimedia Commons, CC BY-SA 3.0.</li>
+          <li>Attached fragments: contact sheet, diary, police note, medical form, ticket, empty room — project originals. Fingerprint stamp from the file overlay.</li>
         </ul>
       </details>
     </footer>
-
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=7"></script>
   </body>
 </html>
