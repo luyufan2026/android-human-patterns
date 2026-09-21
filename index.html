@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@400;500&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css?v=9" />
+    <link rel="stylesheet" href="css/style.css?v=10" />
   </head>
   <body class="page-archive">
     <a class="skip" href="#main">Skip to subject file</a>
@@ -35,6 +35,20 @@
         <p>Evelyn Vale</p>
         <p>1968 · London</p>
       </header>
+
+      <nav class="storyline" aria-label="Case stages">
+        <ol>
+          <li>
+            <a href="index.html" aria-current="step">Archive</a>
+          </li>
+          <li class="is-ahead">
+            <a href="reconstruction.html">Reconstruction</a>
+          </li>
+          <li class="is-ahead">
+            <a href="no-original.html">No Original</a>
+          </li>
+        </ol>
+      </nav>
 
       <nav class="file-nav" aria-label="Archive sections">
         <h1 class="visually-hidden">Case 11, Evelyn Vale. Historical human subject, London 1968.</h1>
@@ -84,17 +98,18 @@
         <aside class="unit unit--observe" data-unit data-mode="observe" aria-label="Archive Reconstruction Unit ARU-07">
           <p class="unit-id">ARU-07</p>
           <p class="unit-name">Archive Reconstruction Unit</p>
-          <div class="optic" data-optic>
+          <figure class="unit-body">
             <img
-              class="optic-ball"
-              data-ball
-              src="images/unit/aru-07-optic.jpg"
-              alt="ARU-07 optical eye, watching the archive."
+              data-still
+              src="images/unit/aru-07-observe-partial.jpg"
+              alt="ARU-07 observing the file: a graphite mechanical eye and part of a quiet face."
             />
-            <span class="optic-lid" data-lid aria-hidden="true"></span>
-          </div>
-          <p class="unit-state" data-unit-state>Reading</p>
-          <p class="unit-line" data-unit-line>Holding gaze on the identity still.</p>
+          </figure>
+          <ol class="unit-thoughts">
+            <li class="is-on">“I begin with the face.”</li>
+            <li>“The records agree on her name. They do not agree on her.”</li>
+            <li>“I can index the subject. I cannot yet reconstruct her.”</li>
+          </ol>
         </aside>
       </nav>
 
@@ -197,6 +212,6 @@
         </ul>
       </details>
     </footer>
-    <script src="js/script.js?v=9"></script>
+    <script src="js/script.js?v=10"></script>
   </body>
 </html>

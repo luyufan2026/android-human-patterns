@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@400;500&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css?v=9" />
+    <link rel="stylesheet" href="css/style.css?v=10" />
   </head>
   <body class="page-none">
     <a class="skip" href="#main">Skip to unverified file</a>
@@ -29,6 +29,20 @@
         <p>Evelyn Vale</p>
         <p>1968 · London</p>
       </header>
+
+      <nav class="storyline" aria-label="Case stages">
+        <ol>
+          <li class="is-past">
+            <a href="index.html">Archive</a>
+          </li>
+          <li class="is-past">
+            <a href="reconstruction.html">Reconstruction</a>
+          </li>
+          <li>
+            <a href="no-original.html" aria-current="step">No Original</a>
+          </li>
+        </ol>
+      </nav>
 
       <nav class="file-nav" aria-label="Archive sections">
         <h1 class="visually-hidden">Unverified readings of Case 11, Evelyn Vale</h1>
@@ -55,25 +69,26 @@
           <div class="unit-copy">
             <p class="unit-id">ARU-07</p>
             <p class="unit-name">Archive Reconstruction Unit</p>
-            <p class="unit-state" data-unit-state>Lock failed</p>
-            <p class="unit-line" data-unit-line>The eye cannot hold one original.</p>
+            <ol class="unit-thoughts">
+              <li class="is-on">“I have produced more than one Evelyn Vale.”</li>
+              <li>“None of them will stay.”</li>
+              <li>“A complete file is not an original.”</li>
+            </ol>
           </div>
-          <div class="optic optic--split" data-optic>
+          <figure class="unit-body">
             <img
-              class="optic-ball"
-              data-ball
-              src="images/unit/aru-07-optic.jpg"
-              alt="ARU-07 optical eye, unable to lock on a single identity."
+              data-still
+              src="images/unit/aru-07-judge.jpg"
+              alt="ARU-07 confronting multiple reconstructions: a nearly full mechanical face, overlapping reflections, several versions of Evelyn Vale in the optical eye."
             />
             <img
-              class="optic-ball optic-ball--ghost"
-              data-ball-b
-              src="images/unit/aru-07-optic.jpg"
+              class="unit-still-ghost"
+              data-still-b
+              src="images/unit/aru-07-judge.jpg"
               alt=""
               aria-hidden="true"
             />
-            <span class="optic-lid" data-lid aria-hidden="true"></span>
-          </div>
+          </figure>
         </aside>
         <p class="ask">
           The records do not change. The reading does.
@@ -197,6 +212,6 @@
         </ul>
       </details>
     </footer>
-    <script src="js/script.js?v=9"></script>
+    <script src="js/script.js?v=10"></script>
   </body>
 </html>

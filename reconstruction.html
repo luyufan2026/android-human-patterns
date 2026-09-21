@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@400;500&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css?v=9" />
+    <link rel="stylesheet" href="css/style.css?v=10" />
   </head>
   <body class="page-recon">
     <a class="skip" href="#main">Skip to visual records</a>
@@ -29,6 +29,20 @@
         <p>Evelyn Vale</p>
         <p>1968 · London</p>
       </header>
+
+      <nav class="storyline" aria-label="Case stages">
+        <ol>
+          <li class="is-past">
+            <a href="index.html">Archive</a>
+          </li>
+          <li>
+            <a href="reconstruction.html" aria-current="step">Reconstruction</a>
+          </li>
+          <li class="is-ahead">
+            <a href="no-original.html">No Original</a>
+          </li>
+        </ol>
+      </nav>
 
       <nav class="file-nav" aria-label="Archive sections">
         <h1 class="visually-hidden">Visual records, Case 11, Evelyn Vale</h1>
@@ -52,17 +66,18 @@
         <aside class="unit unit--interpret" data-unit data-mode="interpret" aria-label="Archive Reconstruction Unit ARU-07">
           <p class="unit-id">ARU-07</p>
           <p class="unit-name">Archive Reconstruction Unit</p>
-          <div class="optic" data-optic>
+          <figure class="unit-body">
             <img
-              class="optic-ball"
-              data-ball
-              src="images/unit/aru-07-optic.jpg"
-              alt="ARU-07 optical eye, comparing fragments."
+              data-still
+              src="images/unit/aru-07-interpret.jpg"
+              alt="ARU-07 reconstructing the file: mechanical head in profile, one graphite hand reaching toward the evidence."
             />
-            <span class="optic-lid" data-lid aria-hidden="true"></span>
-          </div>
-          <p class="unit-state" data-unit-state>Comparing</p>
-          <p class="unit-line" data-unit-line>Cross-referencing visual records.</p>
+          </figure>
+          <ol class="unit-thoughts">
+            <li class="is-on">“The fragments want an order.”</li>
+            <li>“I can assemble a night. I cannot prove it happened.”</li>
+            <li>“A hand reaches. The paper does not answer.”</li>
+          </ol>
         </aside>
       </nav>
 
@@ -191,6 +206,6 @@
         </ul>
       </details>
     </footer>
-    <script src="js/script.js?v=9"></script>
+    <script src="js/script.js?v=10"></script>
   </body>
 </html>
