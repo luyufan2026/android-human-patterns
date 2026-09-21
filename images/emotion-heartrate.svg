@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" role="img" aria-labelledby="title desc">
+  <title id="title">Created media: pulse trace</title>
+  <desc id="desc">A clinical ECG-style line drawn by the project, not found footage.</desc>
+  <rect width="640" height="240" fill="#070807"/>
+  <g stroke="#1a221c" stroke-width="0.4">
+    <path d="M0 40h640M0 80h640M0 120h640M0 160h640M0 200h640"/>
+    <path d="M80 0v240M160 0v240M240 0v240M320 0v240M400 0v240M480 0v240M560 0v240"/>
+  </g>
+  <polyline fill="none" stroke="#86d39a" stroke-width="1.4" points="0,132 70,132 86,132 94,88 102,168 112,120 122,132 210,132 226,132 234,76 244,184 256,128 268,132 360,132 376,132 384,92 394,170 406,124 416,132 510,132 526,132 534,70 544,190 556,126 568,132 640,132"/>
+  <text x="16" y="22" fill="#6d7a70" font-family="ui-monospace, monospace" font-size="9" letter-spacing="2">VITALS / SUBJECT-07 / BPM 74</text>
+  <text x="16" y="228" fill="#6d7a70" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.6">CREATED TRACE - NOT FOUND MEDIA</text>
+</svg>

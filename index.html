@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01 Emotion — Observation Protocol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css?v=7" />
+  </head>
+  <body class="page-emotion">
+    <a class="skip" href="#main">Skip to observation</a>
+
+    <header class="protocol">
+      <p class="protocol-id">Unit 07 / observation</p>
+      <nav aria-label="Protocol pages">
+        <a href="index.html" aria-current="page">01 Emotion</a>
+        <a href="causality.html">02 Causality</a>
+        <a href="accident.html">03 Accident</a>
+      </nav>
+      <p class="protocol-live">
+        Human · <span data-confidence>78%</span>
+        <span class="dot" aria-hidden="true"></span>
+        <time data-clock>00:00:00</time>
+      </p>
+    </header>
+
+    <div class="page-kicker">
+      <h1>01 Emotion</h1>
+      <p class="file">Subject: human &nbsp; Conf <span data-confidence>78%</span></p>
+    </div>
+
+    <main id="main">
+      <section class="observe" aria-label="Emotion observation network">
+        <svg class="net" aria-hidden="true"></svg>
+
+        <figure class="eye-core">
+          <img
+            src="images/observe-eye.jpg"
+            alt="Machine vision core: a close-up iris used as the observation system."
+          />
+        </figure>
+
+        <figure class="subject-back">
+          <img
+            src="images/observe-subject.jpg"
+            alt="The subject seen from behind, standing in front of the observation system."
+          />
+          <figcaption>
+            <span>Subject</span>
+            <span>Under observation</span>
+          </figcaption>
+        </figure>
+
+        <button
+          type="button"
+          class="sample s-cam"
+          data-id="00"
+          data-class="SENSOR"
+          data-conf="99"
+          data-note="Wall-mounted capture node. Not an emotion. It watches the subject who is watching nothing."
+        >
+          <span class="tag">Node</span>
+          <img
+            src="images/observe-cam.jpg"
+            alt="Wall camera used by the observation system."
+          />
+          <span class="cap"><span>Cam 01</span><span>Record</span></span>
+        </button>
+
+        <button
+          type="button"
+          class="sample s-fear"
+          data-id="03"
+          data-class="FEAR"
+          data-conf="72"
+          data-note="Detected widened eyes, open mouth, heightened facial tension. Possible emotional state: fear or surprise."
+        >
+          <span class="tag">Sample</span>
+          <img
+            src="images/subject-fear.png"
+            alt="Same subject, eyes wide, recorded as possible fear or surprise."
+          />
+          <span class="cap"><span>03</span><span>Fear</span></span>
+        </button>
+
+        <button
+          type="button"
+          class="sample s-shock"
+          data-id="02"
+          data-class="SHOCK"
+          data-conf="68"
+          data-note="Mouth open. Breath held. Classification overlaps with fear. Cause: inconsistent."
+        >
+          <span class="tag">Sample</span>
+          <img
+            src="images/subject-shock.png"
+            alt="Same subject, mouth open, recorded as shock."
+          />
+          <span class="cap"><span>02</span><span>Shock</span></span>
+        </button>
+
+        <button
+          type="button"
+          class="sample s-anger"
+          data-id="06"
+          data-class="ANGER"
+          data-conf="61"
+          data-note="Jaw tight. Reduced softness around the mouth. Logged as anger or disgust. Signal is not exclusive."
+        >
+          <span class="tag">Sample</span>
+          <img
+            src="images/subject-anger.png"
+            alt="Same subject, face tightened, recorded as anger or disgust."
+          />
+          <span class="cap"><span>06</span><span>Anger</span></span>
+        </button>
+
+        <button
+          type="button"
+          class="sample s-joy"
+          data-id="04"
+          data-class="JOY"
+          data-conf="62"
+          data-note="Raised cheeks. Increased vocal energy. Often associated with reward. Subject may still report sadness."
+        >
+          <span class="tag">Sample</span>
+          <img
+            src="images/subject-joy.png"
+            alt="Same subject smiling, recorded as joy."
+          />
+          <span class="cap"><span>04</span><span>Joy</span></span>
+        </button>
+
+        <button
+          type="button"
+          class="sample s-reject"
+          data-id="05"
+          data-class="REJECTION"
+          data-conf="58"
+          data-note="Thumbs down. Reduced approval. Withdrawal possible. Label may be sadness, refusal, or performance."
+        >
+          <span class="tag">Sample</span>
+          <img
+            src="images/subject-reject.png"
+            alt="Same subject giving a thumbs down, recorded as rejection or sadness."
+          />
+          <span class="cap"><span>05</span><span>No</span></span>
+        </button>
+
+        <button
+          type="button"
+          class="sample s-null"
+          data-id="11"
+          data-class="UNCLASSIFIED"
+          data-conf="41"
+          data-note="Blank stare. No exclusive class. One expression may indicate multiple emotions."
+        >
+          <span class="tag">Sample</span>
+          <img
+            src="images/subject-blank.png"
+            alt="Same subject, blank stare, no clear emotion class."
+          />
+          <span class="cap"><span>11</span><span>Null</span></span>
+        </button>
+
+        <aside class="readout" data-readout hidden>
+          <button type="button" class="readout-close">Close</button>
+          <p class="readout-status" data-status></p>
+          <div class="readout-body" data-body></div>
+        </aside>
+      </section>
+
+      <section class="notes">
+        <section class="panel">
+          <h2>Human emotion archive</h2>
+          <p class="meta-line">Subject: <span>Human</span></p>
+          <p class="meta-line">Status: <span>Under observation</span></p>
+          <p>Facial expressions are treated as measurable signals.</p>
+        </section>
+        <section class="panel">
+          <h2>System note</h2>
+          <p>One expression may indicate multiple emotions.</p>
+          <p>One emotion may produce multiple expressions.</p>
+        </section>
+        <section class="panel panel--alert">
+          <h2>Anomaly detected</h2>
+          <p>Subject is smiling.</p>
+          <p>Subject reports sadness.</p>
+          <p>Classification conflict.</p>
+        </section>
+        <section class="panel notes-end">
+          <h2>Classification incomplete.</h2>
+          <p class="continue">
+            <a href="causality.html">Next process → Causality</a>
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <details>
+        <summary>Credits / media sources</summary>
+        <ul class="credits-list">
+          <li>
+            Eye / camera / subject-from-behind: found cinematic observation
+            stills (baseline test texture).
+          </li>
+          <li>
+            Six flanking stills: found photographs of the same subject in
+            different expressions.
+          </li>
+        </ul>
+      </details>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
