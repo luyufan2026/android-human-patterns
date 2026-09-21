@@ -1,3 +1,7 @@
+/* CASE 11 interaction.
+   HTML/CSS carry the collage. This file only handles what the layout cannot:
+   opening a record, typing the machine log, updating the subject model,
+   and (on page 2) revising hypotheses when evidence is combined. */
 (function () {
   "use strict";
 
@@ -729,6 +733,8 @@
       if (bar) bar.style.width = state.pct + "%";
       judge.setAttribute("data-clarity", clarityFor(state.pct));
 
+      /* Combinatorial reading: a pair can form a hypothesis; a third record
+         must lower confidence instead of stacking more "facts". */
       function reason() {
         var ids = pins.filter(Boolean);
         var set = {};
@@ -894,6 +900,8 @@
         drawLines(lines);
       }
 
+      /* Lines are beliefs, not decoration: solid = strong, dash = weak,
+         red = conflict, crossed = a previous reading no longer held. */
       function drawLines(lines) {
         if (!svg) return;
         var wrap = svg.parentElement;

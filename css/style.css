@@ -1,4 +1,9 @@
-/* CASE 11 — analog archive × machine cognition. */
+/* CASE 11 — analog archive × machine cognition.
+   Page grids (must stay different):
+   .board        page 1  machine | fragments | subject + city
+   .board-think  page 2  machine | relation well | subject
+   .board-break  page 3  machine | path A | path B | path C
+*/
 
 :root {
   --bg: #e7e0d2;
