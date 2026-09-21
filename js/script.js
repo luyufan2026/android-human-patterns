@@ -462,3 +462,146 @@ window.setInterval(tickClock, 1000);
   window.addEventListener("hashchange", apply);
   apply();
 })();
+
+(function optic() {
+  var unit = document.querySelector("[data-unit]");
+  var well = document.querySelector("[data-optic]");
+  var ball = document.querySelector("[data-ball]");
+  var ballB = document.querySelector("[data-ball-b]");
+  if (!unit || !well || !ball) return;
+
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) return;
+
+  var mode = unit.getAttribute("data-mode") || "observe";
+  var state = document.querySelector("[data-unit-state]");
+  var line = document.querySelector("[data-unit-line]");
+  var gx = 0;
+  var gy = 0;
+  var x = 0;
+  var y = 0;
+  var bx = 0;
+  var by = 0;
+  var range = mode === "judge" ? 15 : mode === "interpret" ? 13 : 10;
+  var lastNote = "";
+  var notes = {
+    observe: [
+      ["Reading", "Holding gaze on the identity still."],
+      ["Reading", "Checking the print against the year."],
+      ["Holding", "The subject does not look back."]
+    ],
+    interpret: [
+      ["Comparing", "Cross-referencing visual records."],
+      ["Comparing", "This fragment does not close the night."],
+      ["Matching", "Source and date are not the same thing."]
+    ],
+    judge: [
+      ["Lock failed", "The eye cannot hold one original."],
+      ["Unstable", "Two readings in the same gaze."],
+      ["Unstable", "More records do not produce one face."]
+    ]
+  };
+
+  function setNote(pair) {
+    if (!pair || pair[1] === lastNote) return;
+    lastNote = pair[1];
+    if (state) state.textContent = pair[0];
+    if (line) line.textContent = pair[1];
+  }
+
+  function lookAtPoint(px, py) {
+    var box = well.getBoundingClientRect();
+    gx = Math.max(-1, Math.min(1, (px - (box.left + box.width / 2)) / 220));
+    gy = Math.max(-1, Math.min(1, (py - (box.top + box.height / 2)) / 180));
+  }
+
+  function lookAtEl(el) {
+    if (!el) return;
+    var box = el.getBoundingClientRect();
+    lookAtPoint(box.left + box.width / 2, box.top + box.height / 2);
+  }
+
+  function visibleShards() {
+    return Array.prototype.filter.call(document.querySelectorAll(".shard"), function (el) {
+      if (el.hidden) return false;
+      var style = window.getComputedStyle(el);
+      return style.display !== "none" && el.offsetWidth > 0;
+    });
+  }
+
+  function interest() {
+    if (mode === "observe") {
+      return [
+        document.querySelector(".portrait img"),
+        document.querySelector(".subject-id"),
+        document.querySelector(".file-log table")
+      ].filter(Boolean);
+    }
+    if (mode === "interpret") {
+      var shards = visibleShards();
+      return shards.length ? shards : [document.querySelector(".clip-board")].filter(Boolean);
+    }
+    return [
+      document.querySelector(".path.is-on"),
+      document.querySelector(".same .shard"),
+      document.querySelector(".model-copy")
+    ].filter(Boolean);
+  }
+
+  var lastMove = 0;
+
+  document.addEventListener("mousemove", function (event) {
+    lastMove = Date.now();
+    lookAtPoint(event.clientX, event.clientY);
+  });
+
+  document.addEventListener("click", function (event) {
+    var target = event.target.closest(".shard, .path");
+    if (!target) return;
+    lookAtEl(target);
+    if (mode === "interpret") setNote(notes.interpret[1]);
+    if (mode === "judge") setNote(notes.judge[1]);
+  });
+
+  var noteIndex = 0;
+  window.setInterval(function () {
+    if (Date.now() - lastMove < 1600) return;
+    var list = notes[mode] || notes.observe;
+    noteIndex = (noteIndex + 1) % list.length;
+    setNote(list[noteIndex]);
+    var els = interest();
+    if (els.length) lookAtEl(els[noteIndex % els.length]);
+  }, mode === "judge" ? 1500 : 2600);
+
+  function blink() {
+    well.classList.add("is-blink");
+    window.setTimeout(function () {
+      well.classList.remove("is-blink");
+    }, 170);
+    window.setTimeout(blink, 2800 + Math.random() * 3200);
+  }
+  window.setTimeout(blink, 1200);
+
+  function frame() {
+    var ease = mode === "judge" ? 0.14 : 0.08;
+    var jx = mode === "judge" ? Math.sin(Date.now() / 210) * 0.9 : 0;
+    var jy = mode === "judge" ? Math.cos(Date.now() / 160) * 0.7 : 0;
+    x += (gx * range + jx - x) * ease;
+    y += (gy * range * 0.78 + jy - y) * ease;
+    ball.style.transform =
+      "translate(calc(-50% + " + x.toFixed(2) + "px), calc(-50% + " + y.toFixed(2) + "px))";
+    if (ballB) {
+      bx += (-gx * range * 0.75 - bx) * 0.09;
+      by += (-gy * range * 0.75 - by) * 0.09;
+      ballB.style.transform =
+        "translate(calc(-50% + " + (bx + jx * 1.4).toFixed(2) + "px), calc(-50% + " + (by - jy).toFixed(2) + "px))";
+    }
+    window.requestAnimationFrame(frame);
+  }
+  frame();
+
+  window.setTimeout(function () {
+    var first = interest()[0];
+    if (first) lookAtEl(first);
+  }, 360);
+})();
